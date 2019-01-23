@@ -1,9 +1,11 @@
-package com.axd.spring_boot_mybatis;
+package com.axd.mybatis;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+@MapperScan("com.axd.mybatis.mapper")
 public class SpringBootMybatisApplication {
 
     public static void main(String[] args) {
