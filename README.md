@@ -25,7 +25,7 @@ packaging: Jar
 
 ### 配置mybatis的依赖
 
-- pom.xml配置
+#### pom.xml配置
 ```
 <!-- Spring Boot Mybatis 依赖 -->
 <dependency>
@@ -40,7 +40,7 @@ packaging: Jar
     <version>8.0.13</version>
 </dependency>
 ```
-- 添加mybatis的自动生成
+#### 添加mybatis的自动生成
 ```
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>
@@ -71,7 +71,7 @@ packaging: Jar
 
 ![pom.xml具体配置](https://github.com/wuyachao/spring_boot_mybatis/blob/master/pom.xml)
 
-- application.properties配置
+#### application.properties配置
 
 ```
 spring.datasource.url = jdbc:mysql://192.168.80.129:3306/db_linkbiz
@@ -81,7 +81,7 @@ spring.datasource.driverClassName = com.mysql.cj.jdbc.Driver
 mybatis.mapper-locations = classpath*:mapper/*Mapper.xml
 ```
 
-- 在src/main/resources文件夹下创建generatorConfig.xml文件
+#### 在src/main/resources文件夹下创建generatorConfig.xml文件
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -139,7 +139,7 @@ mybatis.mapper-locations = classpath*:mapper/*Mapper.xml
 
 ### 链接数据库查询
 
-- 创建controller和路由，查询广告列表和单个广告内容
+#### 创建controller和路由，查询广告列表和单个广告内容
 ```
 @RestController
 public class AdvertContent {
@@ -158,7 +158,7 @@ public class AdvertContent {
 }
 ```
 
-- service
+#### service
 
 ```
     @Resource
@@ -172,7 +172,7 @@ public class AdvertContent {
         return advertContentMapper.getById(id);
     }
 ```
-- resource目录下mapper对应文件编写sql
+#### resource目录下mapper对应文件编写sql
 
-- mapper配置
+#### mapper配置
 SpringBootMybatisApplication文件添加`@MapperScan("com.axd.mybatis.mapper")`
