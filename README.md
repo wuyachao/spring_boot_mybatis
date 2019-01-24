@@ -1,4 +1,16 @@
-## 创建Spring Boot项目
+* [创建Spring Boot项目](#创建Spring Boot项目)
+* [配置mybatis的依赖](#配置mybatis的依赖)
+    * [pom.xml配置](#pom.xml配置)
+    * [添加mybatis的自动生成](#添加mybatis的自动生成)
+    * [application.properties配置](#application.properties配置)
+    * [generatorConfig.xml配置](#在src/main/resources文件夹下创建generatorConfig.xml文件)
+* [链接数据库查询](#链接数据库查询)
+    * [controller](#创建controller和路由，查询广告列表和单个广告内容)
+    * [service](#service)
+    * [mapper](#resource目录下mapper对应文件编写sql)
+    * [mapper配置](#mapper配置)
+    
+### 创建Spring Boot项目
 File->New->Project选择Spring Initializr默认使用官方的https://start.spring.io/选择下一步。
 
 groupId: com.axd
@@ -11,7 +23,7 @@ packaging: Jar
 
 点击下一步选择web，创建一个新的项目
 
-### 在pom.xml配置mybatis的依赖
+### 配置mybatis的依赖
 
 - pom.xml配置
 ```
@@ -57,7 +69,7 @@ packaging: Jar
 </plugin>
 ```
 
-!pom.xml具体配置(https://github.com/wuyachao/spring_boot_mybatis/blob/master/pom.xml)
+![pom.xml具体配置](https://github.com/wuyachao/spring_boot_mybatis/blob/master/pom.xml)
 
 - application.properties配置
 
@@ -120,16 +132,14 @@ mybatis.mapper-locations = classpath*:mapper/*Mapper.xml
     </context>
 </generatorConfiguration>
 ```
-!具体(https://github.com/wuyachao/spring_boot_mybatis/blob/master/src/main/resources/generatorConfig.xml)
+![具体](https://github.com/wuyachao/spring_boot_mybatis/blob/master/src/main/resources/generatorConfig.xml)
 
 点击idea最右侧的Maven Projects => 点击mybatis-generator => 右键mybatis-generator:generate => Run Maven Build
 
 
 ### 链接数据库查询
 
-- 创建controller,service
-
-1.创建路由，查询广告列表和单个广告内容
+- 创建controller和路由，查询广告列表和单个广告内容
 ```
 @RestController
 public class AdvertContent {
@@ -148,7 +158,7 @@ public class AdvertContent {
 }
 ```
 
-2.service
+- service
 
 ```
     @Resource
@@ -162,6 +172,7 @@ public class AdvertContent {
         return advertContentMapper.getById(id);
     }
 ```
-3.resource目录下mapper对应文件编写sql
+- resource目录下mapper对应文件编写sql
 
-4.SpringBootMybatisApplication文件添加`@MapperScan("com.axd.mybatis.mapper")`
+- mapper配置
+SpringBootMybatisApplication文件添加`@MapperScan("com.axd.mybatis.mapper")`
