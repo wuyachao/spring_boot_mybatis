@@ -26,13 +26,13 @@
                 userId="root"
                 password="123456"/>
 
-        <!-- 生成POJO对象，并将类放到com.songguoliang.springboot.entity包下 -->
+        <!-- 生成POJO对象，并将类放到com.axd.mybatis.model包下 -->
         <javaModelGenerator targetPackage="com.axd.mybatis.model" targetProject="src/main/java"></javaModelGenerator>
         <!-- 生成mapper xml文件，并放到resources下的mapper文件夹下 -->
         <sqlMapGenerator targetPackage="mapper"  targetProject="src/main/resources"></sqlMapGenerator>
 
 
-        <!-- 生成mapper xml对应dao接口，放到com.songguoliang.springboot.mapper包下-->
+        <!-- 生成mapper xml对应dao接口，放到com.axd.mybatis.mapper包下-->
         <javaClientGenerator targetPackage="com.axd.mybatis.mapper" targetProject="src/main/java" type="XMLMAPPER"></javaClientGenerator>
 
        <table schema="data" tableName="tb_%">
