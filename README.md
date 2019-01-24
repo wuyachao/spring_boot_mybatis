@@ -1,7 +1,6 @@
 ## 目录
 
-* [创建Spring Boot项目](#创建Spring Boot项目)
-* [创建Spring Boot项目](#配置mybatis的依赖)
+* [创建Spring Boot项目](#)
     * [idea创建空项目](#idea创建空项目)
 * [配置mybatis的依赖](#配置mybatis的依赖)
     * [pom.xml配置](#pom.xml配置)
