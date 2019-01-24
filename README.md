@@ -76,7 +76,7 @@ packaging: Jar
 </plugin>
 ```
 
-![pom.xml具体配置](https://github.com/wuyachao/spring_boot_mybatis/blob/master/pom.xml)
+[pom.xml具体配置](https://github.com/wuyachao/spring_boot_mybatis/blob/master/pom.xml)
 
 #### application.properties配置
 
@@ -139,7 +139,7 @@ mybatis.mapper-locations = classpath*:mapper/*Mapper.xml
     </context>
 </generatorConfiguration>
 ```
-![具体](https://github.com/wuyachao/spring_boot_mybatis/blob/master/src/main/resources/generatorConfig.xml)
+[具体](https://github.com/wuyachao/spring_boot_mybatis/blob/master/src/main/resources/generatorConfig.xml)
 
 点击idea最右侧的Maven Projects => 点击mybatis-generator => 右键mybatis-generator:generate => Run Maven Build
 
