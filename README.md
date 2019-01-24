@@ -11,6 +11,7 @@
     * [mapper配置](#mapper配置)
     
 ### 创建Spring Boot项目
+
 File->New->Project选择Spring Initializr默认使用官方的https://start.spring.io/选择下一步。
 
 groupId: com.axd
